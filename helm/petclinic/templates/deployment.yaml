@@ -1,6 +1,6 @@
 #Deployment
 ###controllers/pb-deploy.tml
-apiVersion: extensions/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: petclinic-deployment
@@ -31,7 +31,7 @@ spec:
             memory: '1Gi'
           requests:
             cpu: '1'
-            memory: '1Gi'
+            memory: '500Mi'
         ports:
         - containerPort: 8080
       imagePullSecrets:
